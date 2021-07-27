@@ -1,30 +1,44 @@
 * {
   margin: 0;
   list-style-type: none;
-  background-color: bisque;
+  box-sizing: border-box;
 
 }
-
 header {
-color:rgb(36, 4, 4);
- padding-top: 8%;
-    padding-left: 8%;
-    padding-right: 8%;
-    padding-bottom: 5%;
-    font-family: 'Source Serif Pro', serif;
-    font-size: 30px;
-    text-align: end;
+    background-color: rgb(22, 114, 114); 
+    margin-bottom: 40px;
+    width: 100%;
+     top: 0;
+    left: 0;
+    position: fixed;
+}
+header h1{
+    color: rgb(219, 248, 248);
+    text-align: center;
+    padding-top:20px;
+}
+header nav{
+   display: flex;
+   justify-content: center;
+}
+header nav {
+    text-align: center;
+    padding-top:20px;
+}
+header nav a{
+    text-decoration: none;
+    padding-top:20px;
+    margin: 0 20px 0 0;
 }
 
-body {
+
+ body {
     margin: 5%;
+    padding-top: 120px;
     height: 90vh;
-}
+    position: absolute;
+} 
 
- main {
-    height: 100%;
-    margin-bottom: -100px;
-}
 main::after {
     content: "";
     display: block;
@@ -36,23 +50,23 @@ main::after {
     font-family: 'Source Serif Pro', serif;
     font-size: 20px;
     width: 70vw;
-}
+} */
 
 h2{
     margin-bottom: 10px;
+}
+.heading {
+    margin-left: 10%
+   
 }
  .picture{
   margin: 20px;
   width: 40%;
 
 }
-div:hover .picture{
-    display: block;
-    font-size: 2em;
-}
 
 #img {
-  width: 250px;
+  width: 100%;
 }
 
 p {
@@ -64,28 +78,24 @@ hr{
     margin: 30px 20px;
 
 }
-li a, a{
+li a{
     text-decoration: none;
-    color: brown;
+    color: rgb(22, 114, 114); 
    
   
 }
 
 /* unvisited link */
-a:link {
-  color: #FF0000;
+nav a:link {
+  color: rgb(219, 248, 248);
 }
 
 /* visited link */
 a:visited {
-  color: #055005;
+  color: rgb(121, 46, 24);
 }
 
 /* mouse over link */
-a:hover {
-  cursor: pointer;
-  color: #FF00FF;
-}
 
 /* selected link */
 a:active {
@@ -95,7 +105,7 @@ a:active {
 
 .footer {
     text-align: center;
-    background: rgb(168, 61, 28);
+    background-color: rgb(22, 114, 114); 
     height:50px;
     width: 100%;
     bottom: 0;
@@ -107,4 +117,79 @@ a:active {
     bottom: 20px;
     position: absolute;
     left: 40%;
+    color: rgb(219, 248, 248);
 }
+
+.wrapper {
+    width: 80%;
+    margin:auto;
+}
+.group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+.item {
+    flex:1;
+    margin: 10px;
+}
+.item-double {
+  flex: 2;
+}
+
+
+/* media query for big screen */
+@media all and (min-width: 600px) {
+    /* *{
+        background-color: rgb(83, 38, 38);
+    } */
+    header {
+        /* font-size: 30px; */
+        display: flex; 
+        justify-content: space-between;
+        padding: 0 30px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        margin-bottom: 40px;
+    }
+    header h1 {
+        margin: 16px 0;
+    }
+    section, h1 {
+    padding: 0 10%;
+  }
+  header nav {
+      margin-top: 8px;
+      margin-right: 8px;
+  }
+
+  header nav a:hover {
+  cursor: pointer;
+  color: #FF00FF;
+}
+
+  .wrapper {
+      width: 90vw;
+      margin: auto
+  }
+  .group {
+    flex-direction: row;
+  }
+
+}
+form input,
+form textarea {
+   width: 100%;
+   margin-bottom: 10px;
+}
+form textarea {
+    margin-top: 10px;
+    height: 100px;
+}
+
+/* add this class to the sections we want to visually separate */
+/* section.bg-callout {   
+   padding: 60px 0;
+   background-color: rgb(126, 121, 121);
+} */
